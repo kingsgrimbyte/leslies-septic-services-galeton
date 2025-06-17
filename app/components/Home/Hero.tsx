@@ -92,7 +92,7 @@ const Hero = () => {
             </div>
           </div>
           {/* Section 1 */}
-          <PortaPottyCalculator/>
+          {/* <PortaPottyCalculator/> */}
           {/* Area we Serve */}
           <div className="mx-auto mt-14 max-w-[95rem] md:mt-20">
             <div className="mt-10 flex md:h-96 rounded-xl  bg-white  shadow-2xl md:mb-10">
