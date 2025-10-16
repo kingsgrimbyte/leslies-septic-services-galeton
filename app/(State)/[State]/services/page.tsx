@@ -1,6 +1,7 @@
 import Banner from "@/app/components/Home/Banner";
 import React from "react";
 import Service from "@/app/components/Home/Service";
+import contentData from "@/components/Content/servicePage.json";
 import NavbarState from "@/app/components/State/NavbarState";
 import { headers } from "next/headers";
 
@@ -8,9 +9,7 @@ import contactContent from "@/app/Data/content";
 import subdomainContent from "@/app/Data/FinalContent";
 
 const ContactInfo: any = contactContent.contactContent;
-const contentData: any = contactContent.servicePageContent;
 const content: any = subdomainContent.subdomainData;
-
 
 export function generateMetadata({ params }: { params: { services: string } }) {
   const headersList = headers();
@@ -54,6 +53,8 @@ const page = () => {
     return <div>Error: Invalid subdomain</div>;
   }
   const Data: any = content[subdomain];
+console.log(contentData.h1Banner)
+
   return (
     <div className="">
       <NavbarState />

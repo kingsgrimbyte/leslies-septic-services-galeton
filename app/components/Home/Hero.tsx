@@ -12,7 +12,6 @@ import Link from "next/link";
 
 import contactContent from "@/app/Data/content";
 import SubdomainContent from "@/app/Data/FinalContent";
-import PortaPottyCalculator from "../Widgets/Calculator";
 
 const ContactInfo: any = contactContent.contactContent;
 const homeData: any = contactContent.homePageContent;
@@ -21,7 +20,7 @@ const content: any = SubdomainContent.subdomainData;
 const Hero = () => {
   const cityData: any = content;
   const slugs: any = Object.keys(cityData).map((key) => cityData[key]);
-   const jsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: homeData.faq.map((faq: any) => ({
@@ -120,7 +119,6 @@ const Hero = () => {
             </div>
           </div>
           {/* Section 1 */}
-          <PortaPottyCalculator />
           {/* Area we Serve */}
           <div className="mx-auto mt-14 max-w-[95rem] md:mt-20">
             <div className="mt-10 flex rounded-xl bg-white  shadow-2xl  md:mb-10 md:h-96">
@@ -167,7 +165,7 @@ const Hero = () => {
           <div className="mt-14 md:mt-20"></div>
           {/* CTA */}
           {/* FAQ */}
-          <Faq data={homeData?.faq}/>
+           <Faq data={homeData?.faq}/>
           {/* FAQ */}
           {/* Review */}
           <ReviewWidget />
